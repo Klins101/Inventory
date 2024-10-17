@@ -23,8 +23,8 @@
                             </li>
                         {% endfor %}
                     </ul>
-                    {% if not view_all %}
-                        <a href="?view_all=true" class="btn btn-link">View All</a>
+                    {% if view_all != 'stock' %}
+                        <a href="?view_all=stock" class="btn btn-link">View All</a>
                     {% endif %}
                 </div>
                 <div class="col-md-6">
@@ -36,8 +36,8 @@
                             </li>
                         {% endfor %}
                     </ul>
-                    {% if not view_all %}
-                        <a href="?view_all=true" class="btn btn-link">View All</a>
+                    {% if view_all != 'stock' %}
+                        <a href="?view_all=stock" class="btn btn-link">View All</a>
                     {% endif %}
                 </div>
             </div>
@@ -55,8 +55,8 @@
                             </li>
                         {% endfor %}
                     </ul>
-                    {% if not view_all %}
-                        <a href="?view_all=true" class="btn btn-link">View All</a>
+                    {% if view_all != 'products' %}
+                        <a href="?view_all=products" class="btn btn-link">View All</a>
                     {% endif %}
                 </div>
                 <div class="col-md-6">
@@ -68,8 +68,8 @@
                             </li>
                         {% endfor %}
                     </ul>
-                    {% if not view_all %}
-                        <a href="?view_all=true" class="btn btn-link">View All</a>
+                    {% if view_all != 'products' %}
+                        <a href="?view_all=products" class="btn btn-link">View All</a>
                     {% endif %}
                 </div>
             </div>
@@ -85,8 +85,8 @@
                 </li>
             {% endfor %}
         </ul>
-        {% if not view_all %}
-            <a href="?view_all=true" class="btn btn-link">View All</a>
+        {% if view_all != 'price' %}
+            <a href="?view_all=price" class="btn btn-link">View All</a>
         {% endif %}
     </div>
 </div>

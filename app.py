@@ -22,19 +22,23 @@ def load_price_recommendations():
 
 @app.route('/')
 def inventory_optimization():
-    view_all = request.args.get('view_all', 'false').lower() == 'true'
+    view_all = request.args.get('view_all', None)
 
     # Load data from CSV files
     stock_recommendations = load_stock_recommendations()
     product_recommendations = load_product_recommendations()
     price_recommendations = load_price_recommendations()
 
-    # Limit to first 4 records if 'view_all' is not set to True
-    if not view_all:
+    # Limit to first 4 records by default unless 'view_all' is specified for a particular table
+    if view_all != 'stock':
         stock_recommendations['high_demand'] = stock_recommendations['high_demand'][:4]
         stock_recommendations['low_demand'] = stock_recommendations['low_demand'][:4]
+
+    if view_all != 'products':
         product_recommendations['related_products'] = product_recommendations['related_products'][:4]
         product_recommendations['bundle_offers'] = product_recommendations['bundle_offers'][:4]
+
+    if view_all != 'price':
         price_recommendations['high_search_low_purchase'] = price_recommendations['high_search_low_purchase'][:4]
 
     return render_template('inventory_optimization.html', 
