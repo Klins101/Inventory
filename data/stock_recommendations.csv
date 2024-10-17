@@ -1,0 +1,21 @@
+product,current_stock,optimal_stock,category
+Dummy product 1,233,120,high_demand
+Dummy product 2,6,100,high_demand
+Dummy product 3,8,100,high_demand
+Dummy product 4,250,120,high_demand
+Dummy product 5,98,50,high_demand
+Dummy product 6,115,30,high_demand
+Dummy product 7,267,50,high_demand
+Dummy product 8,113,120,high_demand
+Dummy product 9,100,80,high_demand
+Dummy product 10,150,90,high_demand
+Dummy product 11,95,70,low_demand
+Dummy product 12,45,40,low_demand
+Dummy product 13,300,150,low_demand
+Dummy product 14,120,100,low_demand
+Dummy product 15,60,60,low_demand
+Dummy product 16,190,110,low_demand
+Dummy product 17,180,90,low_demand
+Dummy product 18,170,80,low_demand
+Dummy product 19,140,70,low_demand
+Dummy product 20,130,60,low_demand
